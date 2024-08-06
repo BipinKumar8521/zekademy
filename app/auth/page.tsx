@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../components/Button";
+import Logo from "../components/Logo";
 
 const AuthPage = () => {
   return (
@@ -14,10 +15,8 @@ const AuthPage = () => {
         />
       </div>
       <div className="relative flex-1 flex justify-center items-center">
-        <div className="absolute -top-24 font-logo md:hidden text-2xl">
-          <p>
-            LO <span className="bg-link rounded-[8px] p-1">GO</span>
-          </p>
+        <div className="absolute -top-24  md:hidden ">
+          <Logo />
         </div>
         <h1 className="absolute -top-12 md:top-8 text-base">
           Journey to a trillion miles starts from here!!

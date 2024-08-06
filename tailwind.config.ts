@@ -23,7 +23,9 @@ const config: Config = {
     colors:{
       buttonBackground: "rgba(25, 39, 52, 1)",
       buttonBorder: "rgba(66, 85, 104, 1)",
-      link: "#00B2FF"
+      link: "#00B2FF",
+      paragraph: "rgba(255, 255, 255, 0.75)",
+
     }
   },
   plugins: [],
