@@ -30,12 +30,12 @@ const Home = () => {
     },
   ];
   return (
-    <div>
+    <div className="bg-buttonBackground h-[100vh]">
       <Navbar />
       <div>
-        <div className="flex justify-between px-14 my-14">
+        <div className="flex justify-between px-4 md:px-14 mt-8 mb-6">
           <h1 className="font-semibold">Popular Topics 🔥</h1>
-          <div className="flex w-[80px] h-[30px] justify-between">
+          <div className="w-[80px] h-[30px] justify-between hidden md:flex">
             <Image
               src="/images/arrow-disabled.svg"
               alt="arrow"
@@ -52,7 +52,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="flex gap-2 h-[222px] overflow-x-hidden px-14">
+        <div className="flex gap-[20px] h-[284px] md:h-[222px] overflow-x-hidden px-4 md:px-14">
           {cardData.map((data, index) => (
             <Card key={index} data={data} />
           ))}
