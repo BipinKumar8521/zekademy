@@ -9,24 +9,32 @@ const Home = () => {
       image: "/images/rocket.png",
       description:
         "Covers fundamentals, design, construction, operation and programming of robots. Covers fundamentals, design, construction, operation and",
+      shortDescription:
+        "Covers fundamentals, design, construction, operation and programming of robots.",
     },
     {
       title: "Astro Physics",
       image: "/images/atom.png",
       description:
         "Covers fundamentals, design, construction, operation and programming of robots. Covers fundamentals, design, construction, operation and",
+      shortDescription:
+        "Covers fundamentals, design, construction, operation and programming of robots.",
     },
     {
       title: "Artificial Intelligence",
       image: "/images/chip.png",
       description:
         "Covers fundamentals, design, construction, operation and programming of robots. Covers fundamentals, design, construction, operation and",
+      shortDescription:
+        "Covers fundamentals, design, construction, operation and programming of robots.",
     },
     {
       title: "Space Exploration",
       image: "/images/telescope.png",
       description:
         "Covers fundamentals, design, construction, operation and programming of robots. Covers fundamentals, design, construction, operation and",
+      shortDescription:
+        "Covers fundamentals, design, construction, operation and programming of robots.",
     },
   ];
   return (
