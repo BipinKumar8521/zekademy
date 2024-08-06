@@ -1,5 +1,4 @@
 import React from "react";
-import { button } from "telegraf/markup";
 
 const Button = ({ children }: { children: React.ReactNode }) => {
   return (
