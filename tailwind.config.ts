@@ -13,7 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      aspectRatio:{
+        "authContainer":"390/379"
+      },
+      fontFamily: {
+        "logo": ["Motley Forces", "cursive"],
+      }
     },
+    colors:{
+      buttonBackground: "rgba(25, 39, 52, 1)",
+      buttonBorder: "rgba(66, 85, 104, 1)",
+      link: "#00B2FF"
+    }
   },
   plugins: [],
 };
