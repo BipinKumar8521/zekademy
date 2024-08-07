@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const EmailAuthForm = ({
   open,
   onClose,
   onSubmit,
+  isLogin,
 }: {
   open: boolean;
   onClose: () => void;
   onSubmit: (email: string, password: string) => void;
+  isLogin: boolean;
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,11 +29,7 @@ const EmailAuthForm = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Perform signup logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
     onSubmit(email, password);
-    // Reset form fields
     setEmail("");
     setPassword("");
   };
@@ -40,29 +39,39 @@ const EmailAuthForm = ({
       {open && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="fixed inset-0 bg-black opacity-50"></div>
-          <div className=" bg-opacity-80 bg-paragraph p-4 rounded-lg z-10">
-            <form onSubmit={handleSubmit}>
-              <label>
+          <div className="bg-black h-[50vh] w-[50vw] p-4 rounded-lg z-10 relative flex justify-center items-center">
+            <form onSubmit={handleSubmit} className="flex flex-col">
+              <h1 className="text-2xl font-semibold">
+                {isLogin ? "Log In" : "Sign Up"}
+              </h1>
+              <br />
+              <label className="flex gap-4">
                 Email:
                 <input
                   type="email"
                   value={email}
                   onChange={handleEmailChange}
+                  required
+                  className="rounded-md bg-transparent border-b-2 px-1 border-white outline-none text-black"
                 />
               </label>
               <br />
-              <label>
+              <label className="flex gap-4">
                 Password:
                 <input
                   type="password"
                   value={password}
                   onChange={handlePasswordChange}
+                  required
+                  className="rounded-md bg-transparent border-b-2 px-1 border-white outline-none text-black"
                 />
               </label>
               <br />
-              <button type="submit">Sign Up</button>
+              <Button>{isLogin ? "Log In" : "Sign Up"}</Button>
             </form>
-            <button onClick={closeModal}>Close Modal</button>
+            <button className="absolute top-4 right-4" onClick={closeModal}>
+              X
+            </button>
           </div>
         </div>
       )}

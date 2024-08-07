@@ -38,6 +38,7 @@ const AuthPage = () => {
         open={showModal}
         onClose={closeModal}
         onSubmit={isLogin ? handleEmailLogin : handleEmailSignUp}
+        isLogin={isLogin}
       />
       <div className="h-full flex-1">
         <Image
