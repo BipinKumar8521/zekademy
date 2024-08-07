@@ -40,7 +40,9 @@ const Home = () => {
         "Covers fundamentals, design, construction, operation and programming of robots.",
     },
   ];
-  const { user, logout } = useAuth();
+  const { user, logout, loading } = useAuth();
+
+  if (loading) return <div>Loading...</div>;
 
   if (!user) redirect("/auth");
 
