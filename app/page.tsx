@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
+import { useAuth } from "./context/AuthContext";
+import { redirect } from "next/navigation";
 
 const Home = () => {
   const cardData = [
@@ -37,9 +40,13 @@ const Home = () => {
         "Covers fundamentals, design, construction, operation and programming of robots.",
     },
   ];
+  const { user, logout } = useAuth();
+
+  if (!user) redirect("/auth");
+
   return (
     <div className="bg-buttonBackground h-[100vh]">
-      <Navbar />
+      <Navbar onSignOut={logout} />
       <div>
         <div className="flex justify-between px-4 md:px-14 mt-8 mb-6">
           <h1 className="font-semibold">Popular Topics 🔥</h1>

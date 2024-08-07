@@ -1,8 +1,21 @@
+"use client";
 import Image from "next/image";
 import Button from "../components/Button";
 import Logo from "../components/Logo";
+import { useAuth } from "../context/AuthContext";
+import { redirect } from "next/navigation";
 
 const AuthPage = () => {
+  const { user, loginWithGoogle, loginWithEmail } = useAuth();
+  if (user) redirect("/");
+
+  const handleLogin = async () => {
+    loginWithGoogle();
+  };
+
+  const handleEmailLogin = async () => {
+    loginWithEmail("", "");
+  };
   return (
     <div className="flex h-[100vh] w-[100vw] flex-col md:flex-row">
       <div className="h-full flex-1">
@@ -28,7 +41,7 @@ const AuthPage = () => {
           </div>
 
           <div className="flex flex-col gap-[24px]">
-            <Button>
+            <Button onClick={handleLogin}>
               <Image
                 src="/images/google.svg"
                 alt="Google Logo"
