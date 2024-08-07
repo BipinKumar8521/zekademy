@@ -25,7 +25,8 @@ const config: Config = {
       buttonBorder: "rgba(66, 85, 104, 1)",
       link: "#00B2FF",
       paragraph: "rgba(255, 255, 255, 0.75)",
-      black:"rgba(25, 39, 52, 0.8)",
+      mblack:"rgba(25, 39, 52, 0.8)",
+      black:"rgba(0, 0, 0, 1)",
       white:"rgba(255, 255, 255, 0.8)",
 
     }
