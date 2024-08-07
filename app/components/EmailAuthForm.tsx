@@ -39,8 +39,11 @@ const EmailAuthForm = ({
       {open && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="fixed inset-0 bg-black opacity-50"></div>
-          <div className="bg-black md:bg-mblack h-[35vh] md:h-[50vh] w-[90vw] md:w-[50vw] p-4 rounded-lg z-10 relative flex justify-center items-center">
-            <form onSubmit={handleSubmit} className="flex flex-col">
+          <div className="bg-black md:bg-mblack h-[35vh] md:h-[50vh] w-[90vw] md:w-[50vw] p-4 rounded-lg z-10 relative md:flex md:justify-center md:items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col w-[80%] md:w-auto"
+            >
               <h1 className="text-2xl font-semibold">
                 {isLogin ? "Log In" : "Sign Up"}
               </h1>

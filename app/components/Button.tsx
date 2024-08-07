@@ -10,7 +10,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className=" block text-semibold border-[2px] border-buttonBorder rounded-[8px] h-[48px] w-[320px]"
+      className=" block text-semibold border-[2px] border-buttonBorder rounded-[8px] h-[48px] w-[100%] md:w-[320px]"
     >
       {children}
     </button>
